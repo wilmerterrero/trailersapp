@@ -15,8 +15,6 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', [TrailerController::class, 'index'])->name('home');
+Route::get('/admin', [TrailerController::class, 'index'])->name('admin');
 
 Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
