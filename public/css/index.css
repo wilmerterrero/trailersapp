@@ -7,7 +7,7 @@ body {
 .trailer-card-img {
     display: block;
     height: 325.925px;
-    width: 220px;
+    width: 230px;
     top: 0;
     left: 0;
     object-fit: cover;
@@ -20,7 +20,7 @@ body {
     font-weight: 400;
     cursor: pointer;
     font-size: 14px;
-    background: rgba(71, 9, 9, 0.856);
+    background: rgb(255, 3, 3);
 }
 
 .trailer-container {
@@ -66,8 +66,8 @@ body {
     opacity: 0;
 }
 
-.trailer-card:hover::before {
-    opacity: 0.7;
+.trailer-card:hover:before {
+    opacity: 0.8;
 }
 
 .trailer-card .trailer-info {
@@ -94,8 +94,9 @@ body {
 
 @media screen and (min-width: 360px) {
     .trailer-container {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
+    
 }
 
 /*Tamaño Movil Promedio*/
