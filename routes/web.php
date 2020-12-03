@@ -5,7 +5,11 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
 Route::resource('trailers', TrailerController::class);
+
 Route::get('/', [TrailerController::class, 'index'])->name('home');
-Route::get('admin', [TrailerController::class, 'adminIndex'])->name('admin');
+
+Route::group(['middleware' => ['auth', 'admin']], function() {
+  Route::get('admin', [TrailerController::class, 'adminIndex'])->name('admin');  
+});
 
 Auth::routes();
