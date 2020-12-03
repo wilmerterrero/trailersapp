@@ -12,6 +12,22 @@
              <!-- Left Side Of Navbar -->
              <ul class="navbar-nav mr-auto">
                  <!-- Authentication Links -->
+                 <li class="nav-item dropdown">
+                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                         Operaciones
+                     </a>
+
+                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                         <a class="dropdown-item" href="#">
+                             Trailers
+                         </a>
+                     </div>
+                 </li>
+             </ul>
+
+             <!-- Right Side Of Navbar -->
+             <ul class="navbar-nav ml-auto">
                  @guest
                      @if (Route::has('login'))
                          <li class="nav-item">
@@ -28,25 +44,13 @@
                      <li class="nav-item dropdown">
                          <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                             Operaciones
-                         </a>
-
-                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                             <a class="dropdown-item" href="#">
-                                 Trailers
-                             </a>
-                         </div>
-                     </li>
-                     <li class="nav-item dropdown">
-                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                              {{ Auth::user()->name }}
                          </a>
 
                          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                              <a class="dropdown-item" href="{{ route('logout') }}"
                                  onclick="event.preventDefault();
-                                                                                             document.getElementById('logout-form').submit();">
+                                                                                                             document.getElementById('logout-form').submit();">
                                  {{ __('Logout') }}
                              </a>
 
@@ -55,16 +59,8 @@
                              </form>
                          </div>
                      </li>
-                 @endguest
-             </ul>
-
-             <!-- Right Side Of Navbar -->
-             <ul class="navbar-nav ml-auto">
-                 <form class="form-inline">
-                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-                 </form>
-             </ul>
+                 </ul>
+             @endguest
          </div>
      </div>
  </nav>
