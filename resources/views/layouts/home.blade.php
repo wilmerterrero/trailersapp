@@ -33,7 +33,7 @@
             @include('partials.nav')
         </header>
 
-        <main class="py-4">
+        <main class="py-2">
             <div class="trailer-container">
                 @yield('content')
             </div>
