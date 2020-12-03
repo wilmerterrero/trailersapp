@@ -4,11 +4,11 @@ $(document).ready(function() {
     $('#trailers').DataTable();
 
     /* Save trailer */
-    $('#newTrailer').click(function(e) {
+    $('body').on('click', '#newTrailer', function(e) {
         e.preventDefault();
         $('#btn-save').val("create-trailer");
         $('#trailer').trigger("reset");
-        $('#trailerCrudModal').html("Creando un nuevo trailer");
+        $('#trailerCrudModal-add').html("Creando un nuevo trailer");
         $('#crud-modal').modal('show');
     });
 
@@ -16,9 +16,10 @@ $(document).ready(function() {
     $('body').on('click', '#editTrailer', function() {
         var trailer_id = $(this).data('id');
         $.get('/trailers/' + trailer_id + '/edit', function(data) {
-            $('#trailerCrudModal').html("Editando trailer");
+            $('#trailerCrudModal-add').html("Editando trailer");
             $('#btn-save').val("Editar");
             $('#crud-modal').modal('show');
+            $('#trailer_id').val(data.id);
             $('#titulo').val(data.titulo);
             $('#descripcion').val(data.descripcion);
             $('#director').val(data.director);

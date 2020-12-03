@@ -1,9 +1,9 @@
-<!-- Add and Edit trailer modal -->
+<!-- Add trailer modal -->
 <div class="modal fade" id="crud-modal" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="trailerCrudModal"></h4>
+                <h4 class="modal-title" id="trailerCrudModal-add"></h4>
             </div>
             <div class="modal-body">
                 <form name="trailerForm" action="{{ route('trailers.store') }}" method="POST">

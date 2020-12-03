@@ -8,15 +8,15 @@ use Illuminate\Http\Request;
 class TrailerController extends Controller
 {
 
-  	/**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth')->except('index', 'show');
-    }
+	/**
+	 * Create a new controller instance.
+	 *
+	 * @return void
+	 */
+	public function __construct()
+	{
+		$this->middleware('auth')->except('index', 'show');
+	}
 
 
 	/**
@@ -71,10 +71,10 @@ class TrailerController extends Controller
 			'thumbnail' => 'required',
 		]);
 
-		$trailerId = $request->trailer_id;
-
 		Trailer::updateOrCreate(
-			['id' => $trailerId],
+			[
+				'id' => $request->trailer_id
+			],
 			[
 				'titulo' => $request->titulo,
 				'descripcion' => $request->descripcion,
@@ -105,8 +105,9 @@ class TrailerController extends Controller
 	{
 		$where = array('id' => $id);
 		$trailer = Trailer::where($where)->first();
-		return view('trailers.show', 
-			[ 'trailer' => $trailer ] 
+		return view(
+			'trailers.show',
+			['trailer' => $trailer]
 		);
 	}
 
