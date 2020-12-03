@@ -8,6 +8,17 @@ use Illuminate\Http\Request;
 class TrailerController extends Controller
 {
 
+  	/**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth')->except('index', 'show');
+    }
+
+
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -16,8 +27,20 @@ class TrailerController extends Controller
 	public function index()
 	{
 		$trailers = Trailer::latest()->paginate();
+		return view('trailers.index', compact('trailers'));
+	}
+
+	/**
+	 * Display a listing of the resource.
+	 *
+	 * @return \Illuminate\Http\Response
+	 */
+	public function adminIndex()
+	{
+		$trailers = Trailer::latest()->paginate();
 		return view('admin', compact('trailers'));
 	}
+
 
 	/**
 	 * Show the form for creating a new resource.
