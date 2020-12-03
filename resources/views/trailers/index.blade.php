@@ -2,8 +2,8 @@
 
 @section('content')
     @forelse ($trailers as $trailer)
-        <div class="trailer-item">
-            <div class="trailer-card">
+        <div class="item trailer-item">
+            <div class="trailer-card card">
                 <img class="trailer-card-img" src="{{ $trailer->thumbnail }}"
                     alt="trailer-card image" />
                 <div class="trailer-info">
