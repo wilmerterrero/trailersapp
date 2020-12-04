@@ -123,9 +123,31 @@ body {
 }
 
 
+/*Tamaños
+
+/*Tamaño Movil Promedio*/
+
+@media (max-width: 320px) {
+    .trailer-container {
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0 auto;
+        float: none;
+        margin-left: 0;
+       margin-right: 0;
+    }
+}
+
 /*Tamaño Movil Promedio*/
 
 @media screen and (min-width: 375px) {
+    .trailer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/*Tamaño Movil Grande*/
+
+@media screen and (min-width: 425px) {
     .trailer-container {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -179,6 +201,7 @@ body {
     }
 }
 
+/*Fin Tamaños
 
 /*FOOTER*/
 
@@ -340,3 +363,5 @@ body {
 .social-icons a.youtube:hover {
     background-color: #b60000
 }
+
+/** Fin del footer
