@@ -26,7 +26,7 @@ class TrailerController extends Controller
 	 */
 	public function index()
 	{
-		$trailers = Trailer::latest()->paginate();
+		$trailers = Trailer::latest()->paginate(12);
 		return view('trailers.index', compact('trailers'));
 	}
 
@@ -37,7 +37,7 @@ class TrailerController extends Controller
 	 */
 	public function adminIndex()
 	{
-		$trailers = Trailer::latest()->paginate();
+		$trailers = Trailer::latest()->paginate(100);
 		return view('admin', compact('trailers'));
 	}
 

@@ -1,8 +1,15 @@
 <div class="col-9">
     <div class="input-group md-form form-sm form-2 pl-0 relative">
 
-        <input class="form-control my-0 py-1 lime-border" type="text" placeholder="Buscador de trailers"
-            aria-label="Search" wire:model="query" />
+        <input 
+            class="form-control my-0 py-1 lime-border" 
+            type="text" 
+            placeholder="Buscador de trailers"
+            aria-label="Search" 
+            wire:model="query"
+            wire:keydown.escape="resetSearch"
+            wire:keydown.tab="resetSearch"
+        />
 
         <div class="input-group-append">
             <span class="input-group-text lime lighten-2" id="basic-text1"><i class="fas fa-search text-grey"

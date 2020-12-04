@@ -12,6 +12,11 @@ class TrailerSearchBar extends Component
 
     public function mount()
     {
+        $this->resetSearch();
+    }
+    
+    public function resetSearch()
+    {
         $this->query = '';
         $this->trailers = [];
     }
