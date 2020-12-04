@@ -21,6 +21,7 @@
                 <p>{{ $trailer->fecha_estreno }}</p>
             </div>
         </div>
+
     @empty
         <p>No hay trailers disponibles</p>
     @endforelse
