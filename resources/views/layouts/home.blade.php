@@ -38,10 +38,6 @@
 
         <main class="py-2">
 
-            <section class="m-5">
-                @include('partials.carousel')
-            </section>
-
             <div class="trailer-container">
                 @yield('content')
             </div>
