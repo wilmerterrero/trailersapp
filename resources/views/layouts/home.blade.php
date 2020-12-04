@@ -27,6 +27,9 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/index.css') }}" rel="stylesheet">
+
+    <!-- Livewire  -->
+    @livewireStyles
 </head>
 
 <body>
@@ -37,18 +40,23 @@
         </header>
 
         <main class="py-2">
-            <div class="trailer-container">
+
+            <div class="trailers">
                 @yield('content')
             </div>
+
             <section class="section-trailer">
                 @yield('trailer')
             </section>
+
         </main>
 
         @include('partials.footer')
 
     </div>
 
+    <!-- Livewire  -->
+    @livewireScripts
 </body>
 
 </html>
