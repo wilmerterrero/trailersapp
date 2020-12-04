@@ -21,6 +21,9 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!-- VideoJS -->
+    <link rel="stylesheet" href={{ asset('video-js/dist/video-js.min.css') }} />
+
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/index.css') }}" rel="stylesheet">
@@ -34,9 +37,19 @@
         </header>
 
         <main class="py-2">
+
+            <section class="m-5">
+                @include('partials.carousel')
+            </section>
+
             <div class="trailer-container">
                 @yield('content')
             </div>
+
+            <section class="section-trailer">
+                @yield('trailer')
+            </section>
+
         </main>
 
     </div>

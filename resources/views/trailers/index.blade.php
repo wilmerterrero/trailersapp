@@ -13,7 +13,7 @@
                     <p>{{ $trailer->director }}</p>
                     <h6>Estudio</h6>
                     <p>{{ $trailer->estudio }}</p>
-                    <a href="" class="trailer-btn">Ver</a>
+                    <a href="{{ route('trailers.show', $trailer) }}" class="trailer-btn">Ver</a>
                 </div>
             </div>
             <div class="trailer-header">
