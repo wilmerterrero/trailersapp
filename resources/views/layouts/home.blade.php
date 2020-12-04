@@ -51,7 +51,10 @@
 
         </main>
 
-        @include('partials.footer')
+        <div class="pt-5">
+            @include('partials.footer')
+        </div>
+
 
     </div>
 

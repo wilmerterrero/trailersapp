@@ -38,7 +38,7 @@
             @include('partials.nav')
         </header>
 
-        <main class="py-4 bg-admin">
+        <main class="py-4 bg-dark">
             @yield('content')
         </main>
 

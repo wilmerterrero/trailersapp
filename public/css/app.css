@@ -15511,3 +15511,7 @@ a.text-dark:focus {
   }
 }
 
+.bg-admin {
+  background-color: #222222;
+}
+
