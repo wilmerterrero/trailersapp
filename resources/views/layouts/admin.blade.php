@@ -29,16 +29,19 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!-- Livewire  -->
+    @livewireStyles
 </head>
 
 <body>
-    <div id="app">
+    <div id="app" class="bg-admin">
 
         <header>
             @include('partials.nav')
         </header>
 
-        <main class="py-4 bg-dark">
+        <main class="py-4">
             @yield('content')
         </main>
 
@@ -49,6 +52,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" defer></script>
     <script src="{{ asset('js/ajax.js') }}"></script>
 
+    <!-- Livewire  -->
+    @livewireScripts
 </body>
 
 </html>

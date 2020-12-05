@@ -15513,5 +15513,10 @@ a.text-dark:focus {
 
 .bg-admin {
   background-color: #222222;
+  min-height: 100vh !important;
+}
+
+.search-results {
+  z-index: 1;
 }
 

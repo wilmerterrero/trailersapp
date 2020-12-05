@@ -12,4 +12,9 @@
 
 .bg-admin {
     background-color: rgb(34, 34, 34);
+    min-height: 100vh !important;
+}
+
+.search-results {
+    z-index: 1;
 }
