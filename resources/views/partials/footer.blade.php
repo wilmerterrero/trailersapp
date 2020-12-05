@@ -14,7 +14,7 @@
 
                  <p class="copyright-text">Copyright &copy; 2019-8127 All Rights Reserved by
                      <a href="#">Wilmer Terrero & Naomi Céspedes</a>.
-                     <br> Todos los contenidos de este Sitio (Incluyendo, pero no limitado a,
+                     <br><br> Todos los contenidos de este Sitio (Incluyendo, pero no limitado a,
                      texto, logotipos, contenido, fotografías, audio, botones, nombres comerciales y vídeo) están
                      sujetos a derechos de propiedad por las leyes de Derechos de autor.
                  </p>

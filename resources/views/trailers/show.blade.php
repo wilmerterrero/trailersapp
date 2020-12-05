@@ -3,7 +3,7 @@
 @section('title', 'Trailer')
 
 @section('trailer')
-    <div class="container-trailer-card-in">
+    <div class="container-trailer-card-in pt-5">
         <div class="col-12 col-md-12">
             <div class="card card-trailer-in">
                 <video id="vid{{ $trailer->id }}" class="video-js vjs-default-skin card-img-top trailer-video-in" controls
